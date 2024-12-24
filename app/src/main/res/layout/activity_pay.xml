@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xc.apex.nre.customerdemo.view.widget.ScanView
+            android:id="@+id/scan_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:qrcv_animTime="1000"
+            app:qrcv_barCodeTipText="@string/scan_tip"
+            app:qrcv_barcodeRectHeight="120dp"
+            app:qrcv_borderColor="@android:color/white"
+            app:qrcv_borderSize="0dp"
+            app:qrcv_cornerColor="@color/green"
+            app:qrcv_cornerDisplayType="center"
+            app:qrcv_cornerLength="20dp"
+            app:qrcv_cornerSize="3dp"
+            app:qrcv_customScanLineDrawable="@drawable/scan_icon_scanline"
+            app:qrcv_isAutoZoom="true"
+            app:qrcv_isBarcode="false"
+            app:qrcv_isOnlyDecodeScanBoxArea="false"
+            app:qrcv_isScanLineReverse="true"
+            app:qrcv_isShowDefaultGridScanLineDrawable="false"
+            app:qrcv_isShowDefaultScanLineDrawable="true"
+            app:qrcv_isShowLocationPoint="true"
+            app:qrcv_isShowTipBackground="true"
+            app:qrcv_isShowTipTextAsSingleLine="false"
+            app:qrcv_isTipTextBelowRect="false"
+            app:qrcv_maskColor="#33FFFFFF"
+            app:qrcv_qrCodeTipText="@string/scan_tip"
+            app:qrcv_rectWidth="200dp"
+            app:qrcv_scanLineColor="@color/red"
+            app:qrcv_scanLineMargin="0dp"
+            app:qrcv_scanLineSize="0.5dp"
+            app:qrcv_tipTextColor="@android:color/white"
+            app:qrcv_tipTextSize="12sp"
+            app:qrcv_toolbarHeight="56dp"
+            app:qrcv_topOffset="70dp"
+            app:qrcv_verticalBias="-1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/CommonPageStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints">
+
+            <!--订单-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_order"
+                style="@style/CommonBisectLeftModelStyle"
+                android:background="@drawable/bg_radius_33_white"
+                android:padding="@dimen/pay_order_layout_padding"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/layout_pay">
+
+                <!--表头-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_table_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pay_order_item_h"
+                    android:layout_marginTop="@dimen/pay_order_table_title_mt"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_order_title_item"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pay_order_item_mlr"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_checkouts_table_item"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_16"
+                        android:textStyle="bold"
+                        app:layout_constraintHorizontal_weight="2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/tv_order_title_amount" />
+
+                    <TextView
+                        android:id="@+id/tv_order_title_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/txt_checkouts_table_amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_16"
+                        android:textStyle="bold"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_order_title_item"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_order_title_subtotal" />
+
+                    <TextView
+                        android:id="@+id/tv_order_title_subtotal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/pay_order_item_mlr"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/txt_checkouts_table_subtotal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_16"
+                        android:textStyle="bold"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_order_title_amount"
+                        app:layout_constraintRight_toRightOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/v_separate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separate"
+                    android:background="@color/grey_e2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_table_header" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_order"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/pay_order_list_mb"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_total"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_separate" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pay_bottom_total_layout_h"
+                    android:background="@drawable/bg_radius_28_yellow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pay_bottom_total_tv_mlr"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_order_btn_total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_19"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_total_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/pay_bottom_total_tv_mlr"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_order_btn_def_total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_28"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toRightOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--支付-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_pay"
+                style="@style/CommonBisectRightModelStyle"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/layout_order"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <!--现金支付-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_pay_cash"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_bg_cash"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_crash_total"
+                        style="@style/PayWayTotalStrTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pay_cash2qrcode_total_mt"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_crash_total_value"
+                        style="@style/PayWayMoneyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_crash_total" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/pay_cash2qrcode_subtitle_mb"
+                        android:text="@string/txt_pay_in_crash"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ts_19"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--卡支付-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_pay_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_bg_card"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_card_total"
+                        style="@style/PayWayTotalStrTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pay_card_title_txt_mt"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_card_total_value"
+                        style="@style/PayWayMoneyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_card_total" />
+
+                    <TextView
+                        style="@style/PayCardQrcodeTipsTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pay_card_title_sub_txt_mt"
+                        android:text="@string/txt_pay_by_card"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_card_total_value" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--QRCode支付-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_pay_qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/pay_qrcode_card_layout_mb"
+                        android:background="@drawable/bg_radius_33_yellow"
+                        app:layout_constraintBottom_toTopOf="@+id/layout_camera_pos"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_qrcode_total"
+                            style="@style/PayWayTotalStrTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/pay_cash2qrcode_total_mt"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_qrcode_value"
+                            style="@style/PayWayMoneyTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_qrcode_total" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/pay_qrcode_img_size"
+                            android:layout_marginTop="@dimen/pay_qrcode_img_mt"
+                            android:src="@drawable/ic_qrcode"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_qrcode_value" />
+
+                        <TextView
+                            style="@style/PayCardQrcodeTipsTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/pay_cash2qrcode_subtitle_mb"
+                            android:gravity="center"
+                            android:text="@string/txt_scan_to_pay"
+                            android:textSize="@dimen/ts_20"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--camera pos-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_camera_pos"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pay_qrcode_pos_layout_h"
+                        android:background="@drawable/ic_bg_qrcode"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/pay_qrcode_camera_pos_ml"
+                            android:gravity="center_vertical"
+                            android:text="@string/txt_camera_pos"
+                            android:textColor="@color/dark_66"
+                            android:textSize="@dimen/ts_15"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--支付结束-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_pay_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_pay_result_bg"
+                            android:layout_width="260dp"
+                            android:layout_height="260dp"
+                            android:layout_marginTop="55dp"
+                            android:background="@drawable/ic_pay_result_bg"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iv_pay_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/pay_result_img_size"
+                            android:layout_marginTop="@dimen/pay_result_img_mt"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/pay_result_tip_mt"
+                            android:gravity="center"
+                            android:lineHeight="@dimen/pay_result_tip_line_h"
+                            android:text="@string/txt_pay_success"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ts_20"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/iv_pay_result_bg" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

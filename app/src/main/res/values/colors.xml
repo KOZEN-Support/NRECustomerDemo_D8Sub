@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主题色-->
+    <color name="dominant_color">#1D1D1D</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_f2">#F2F2F5</color>
+    <color name="gray_e7">#E7E7EB</color>
+    <color name="grey_c5">#C5C5C7</color>
+    <color name="grey_e2">#E2E6E9</color>
+    <color name="grey_a1">#A1A1A1</color>
+
+    <color name="black">#1D1D1D</color>
+    <color name="dark_98">#989898</color>
+    <color name="dark_66">#666666</color>
+    <!--60% #666666-->
+    <color name="dark_60_66">#99666666</color>
+    <color name="dark_42">#424242</color>
+    <color name="dark_2c">#2c2c2c</color>
+
+    <color name="yellow">#ffe900</color>
+    <color name="orange">#ffB880</color>
+</resources>

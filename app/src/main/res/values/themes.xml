@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.NRECustomerDemo" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Theme.NRECustomerDemo" parent="Base.Theme.NRECustomerDemo" />
+
+    <style name="SplashTheme" parent="Base.Theme.NRECustomerDemo">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="DiscountTheme" parent="Base.Theme.NRECustomerDemo">
+        <item name="android:windowBackground">@drawable/ic_bg_page</item>
+    </style>
+
+    <style name="PayPageTheme" parent="Base.Theme.NRECustomerDemo">
+        <item name="android:windowBackground">@drawable/ic_bg_page</item>
+    </style>
+</resources>

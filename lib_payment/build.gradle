@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.xc.apex.nre.lib_payment'
+    compileSdk libs.versions.compileSdk.get().toInteger()
+
+    defaultConfig {
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.targetSdk.get().toInteger()
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation files('libs\\classes-full-debug.jar')
+    implementation libs.appcompat
+    implementation libs.material
+    annotationProcessor libs.roomcompiler
+    implementation libs.room
+}

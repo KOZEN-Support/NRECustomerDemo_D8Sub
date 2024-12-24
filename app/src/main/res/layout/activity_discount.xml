@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingConstraints">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg_page">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_adv"
+            style="@style/DiscountLeftModelStyle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/layout_vip">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_discount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_vip"
+            style="@style/DiscountRightModelStyle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/layout_adv"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/page_padding"
+                android:background="@drawable/bg_radius_33_yellow" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discount_vip_sub_layout_h"
+                android:background="@drawable/bg_radius_33_white"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_join_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/discount_vip_txt_mt"
+                    android:gravity="center"
+                    android:text="@string/txt_vip"
+                    android:textColor="@color/dark_98"
+                    android:textSize="@dimen/ts_30"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="@dimen/discount_vip_qrcode_layout_size"
+                    android:layout_height="@dimen/discount_vip_qrcode_layout_size"
+                    android:layout_marginTop="@dimen/discount_vip_qrcode_layout_mt"
+                    android:background="@drawable/bg_radius_33_yellow"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_join_vip">
+
+                    <ImageView
+                        android:layout_width="@dimen/discount_vip_qrcode_img_size"
+                        android:layout_height="@dimen/discount_vip_qrcode_img_size"
+                        android:src="@drawable/ic_qrcode"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/discount_vip_join_us_mb"
+                    android:gravity="center"
+                    android:text="@string/txt_join_us"
+                    android:textColor="@color/dark_42"
+                    android:textSize="@dimen/ts_19"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/iv_join_vip"
+                android:layout_width="@dimen/discount_vip_img_w"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/discount_vip_img_ml"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

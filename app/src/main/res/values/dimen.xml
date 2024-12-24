@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--字号-->
+    <dimen name="ts_14">14sp</dimen>
+    <dimen name="ts_15">15sp</dimen>
+    <dimen name="ts_16">16sp</dimen>
+    <dimen name="ts_18">18sp</dimen>
+    <dimen name="ts_19">19sp</dimen>
+    <dimen name="ts_20">20sp</dimen>
+    <dimen name="ts_25">25sp</dimen>
+    <dimen name="ts_28">28sp</dimen>
+    <dimen name="ts_30">30sp</dimen>
+    <dimen name="ts_36">36sp</dimen>
+    <dimen name="ts_40">40sp</dimen>
+    <dimen name="ts_43">43sp</dimen>
+    <dimen name="ts_45">45sp</dimen>
+    <dimen name="ts_50">50sp</dimen>
+    <dimen name="ts_60">60sp</dimen>
+
+    <!--圆角-->
+    <dimen name="radius_23">23dp</dimen>
+    <dimen name="radius_28">28dp</dimen>
+    <dimen name="radius_33">33dp</dimen>
+
+    <!--公用-->
+    <dimen name="page_padding">18dp</dimen>
+    <dimen name="model_separate">7dp</dimen>
+    <dimen name="separate">1px</dimen>
+
+    <!--启动页-->
+    <dimen name="splash_logo_size">100dp</dimen>
+    <dimen name="splash_name_mt">12dp</dimen>
+
+    <!--优惠券-->
+    <dimen name="discount_avd_img_margin">8dp</dimen>
+    <dimen name="discount_vip_img_w">170dp</dimen>
+    <dimen name="discount_vip_img_h">166dp</dimen>
+    <dimen name="discount_vip_img_mt">18dp</dimen>
+    <dimen name="discount_vip_img_ml">25dp</dimen>
+    <dimen name="discount_vip_sub_layout_h">402dp</dimen>
+    <dimen name="discount_vip_txt_mt">35dp</dimen>
+    <dimen name="discount_vip_qrcode_layout_size">180dp</dimen>
+    <dimen name="discount_vip_qrcode_layout_mt">25dp</dimen>
+    <dimen name="discount_vip_qrcode_img_size">130dp</dimen>
+    <dimen name="discount_vip_join_us_mb">50dp</dimen>
+
+    <!--支付-->
+    <dimen name="pay_order_layout_padding">15dp</dimen>
+    <dimen name="pay_order_table_title_mt">12dp</dimen>
+    <dimen name="pay_order_list_mb">20dp</dimen>
+    <dimen name="pay_order_item_h">45dp</dimen>
+    <dimen name="pay_order_item_mlr">20dp</dimen>
+    <dimen name="pay_bottom_total_layout_h">65dp</dimen>
+    <dimen name="pay_bottom_total_tv_mlr">60dp</dimen>
+    <dimen name="pay_cash2qrcode_total_mt">35dp</dimen>
+    <dimen name="pay_cash_val_mt">8dp</dimen>
+    <dimen name="pay_cash2qrcode_subtitle_mb">60dp</dimen>
+    <dimen name="pay_card_title_txt_mt">120dp</dimen>
+    <dimen name="pay_card_title_sub_txt_mt">10dp</dimen>
+    <dimen name="pay_card_title_sub_txt_line_h">25dp</dimen>
+    <dimen name="pay_qrcode_card_layout_mb">10dp</dimen>
+    <dimen name="pay_qrcode_pos_layout_h">70dp</dimen>
+    <dimen name="pay_qrcode_img_size">110dp</dimen>
+    <dimen name="pay_qrcode_img_mt">30dp</dimen>
+    <dimen name="pay_qrcode_camera_pos_ml">135dp</dimen>
+    <dimen name="pay_result_img_size">200dp</dimen>
+    <dimen name="pay_result_img_mt">80dp</dimen>
+    <dimen name="pay_result_tip_mt">25dp</dimen>
+    <dimen name="pay_result_tip_line_h">25dp</dimen>
+</resources>

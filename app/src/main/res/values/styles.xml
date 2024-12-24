@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CommonPageStyle">
+        <item name="android:background">@drawable/ic_bg_page</item>
+        <item name="android:padding">@dimen/page_padding</item>
+    </style>
+
+    <style name="CommonBisectLeftModelStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginRight">@dimen/model_separate</item>
+    </style>
+
+    <style name="CommonBisectRightModelStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/model_separate</item>
+    </style>
+
+    <style name="DiscountLeftModelStyle" parent="CommonBisectLeftModelStyle">
+        <item name="android:layout_marginLeft">@dimen/page_padding</item>
+        <item name="android:layout_marginTop">@dimen/page_padding</item>
+        <item name="android:layout_marginBottom">@dimen/page_padding</item>
+    </style>
+
+    <style name="DiscountRightModelStyle" parent="CommonBisectRightModelStyle">
+        <item name="android:layout_marginRight">@dimen/page_padding</item>
+        <item name="android:layout_marginBottom">@dimen/page_padding</item>
+    </style>
+
+    <style name="PayWayTotalStrTextStyle">
+        <item name="android:textColor">@color/dark_66</item>
+        <item name="android:textSize">@dimen/ts_18</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/txt_total</item>
+    </style>
+
+    <style name="PayWayMoneyTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/ts_43</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/txt_order_btn_def_total</item>
+    </style>
+
+    <style name="PayCardQrcodeTipsTextStyle">
+        <item name="android:textColor">@color/dark_42</item>
+        <item name="android:textSize">@dimen/ts_16</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineHeight">@dimen/pay_card_title_sub_txt_line_h</item>
+    </style>
+</resources>

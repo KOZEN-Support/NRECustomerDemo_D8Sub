@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/color_green" /> <!-- 背景颜色，您可以修改 -->
+    <corners android:radius="6dp" /> <!-- 使背景成为圆形 -->
+</shape>

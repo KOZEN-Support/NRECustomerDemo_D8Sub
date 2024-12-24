@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.pos.permission.ACCESSORY_DATETIME" />
+    <uses-permission android:name="com.pos.permission.ACCESSORY_LED" />
+    <uses-permission android:name="com.pos.permission.ACCESSORY_BEEP" />
+    <uses-permission android:name="com.pos.permission.ACCESSORY_RFREGISTER" />
+    <uses-permission android:name="com.pos.permission.CARD_READER_ICC" />
+    <uses-permission android:name="com.pos.permission.CARD_READER_PICC" />
+    <uses-permission android:name="com.pos.permission.CARD_READER_MAG" />
+    <uses-permission android:name="com.pos.permission.COMMUNICATION" />
+    <uses-permission android:name="com.pos.permission.PRINTER" />
+    <uses-permission android:name="com.pos.permission.SECURITY" />
+    <uses-permission android:name="com.pos.permission.ACCESSORY_RFREGISTER" />
+    <uses-permission android:name="com.pos.permission.EMVCORE" />
+    <uses-permission android:name="com.wheatek.ad.permission.START_ACTIVITY" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+</manifest>

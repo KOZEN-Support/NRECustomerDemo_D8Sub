@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MEOW PAY</string>
+
+    <!--辅助提示-->
+    <string name="txt_service_notification_title">NRECustomerService</string>
+    <string name="txt_service_notification_content">This is a high priority foreground service.</string>
+    <string name="txt_register_usb_completed">Registration of communication channel completed.</string>
+    <string name="txt_permission_failed">Camera permission application failed, unable to use camera payment. Please manually enable camera permissions in the settings.</string>
+    <string name="txt_payment_init_success">Payment init success.</string>
+    <string name="txt_exit_app_tips">Press the back button again to exit the application.</string>
+
+    <!--优惠券界面-->
+    <string name="txt_vip">JOIN VIP</string>
+    <string name="txt_join_us">Become Our Member!</string>
+
+    <!--支付界面-->
+    <string name="txt_checkouts_table_item">Items</string>
+    <string name="txt_checkouts_table_amount">Amount</string>
+    <string name="txt_checkouts_table_subtotal">Subtotal</string>
+    <string name="txt_order_btn_total">TOTAL</string>
+    <string name="txt_order_btn_def_total">$0.00</string>
+    <string name="txt_total">Total</string>
+    <string name="txt_pay_in_crash">Waiting For Payment</string>
+    <string name="txt_pay_success">Payment \n Succeeded!</string>
+    <string name="txt_pay_failed">Payment Failed! \n Please Retry</string>
+    <string name="txt_pay_ic">IC</string>
+    <string name="txt_pay_msr">MSR</string>
+    <string name="txt_pay_by_card">Please Make Payment \n Using Your Bank Card.</string>
+    <string name="txt_scan_to_pay">Scan To Pay</string>
+    <string name="txt_camera_pos">Show your QR Code here.</string>
+</resources>

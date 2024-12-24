@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.xc.apex.nre.customerdemo'
+    compileSdk libs.versions.compileSdk.get().toInteger()
+
+    defaultConfig {
+        applicationId "com.xc.apex.nre.customerdemo"
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.targetSdk.get().toInteger()
+        versionCode libs.versions.appVersionCode.get().toInteger()
+        versionName libs.versions.appVersionName.get().toString()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        config {
+            storeFile file('../signature/D08C1_key.keystore')
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "NRE_Customer_${versionName}.apk"
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.viewpager
+    implementation libs.glide
+    annotationProcessor libs.glideCompiler
+    implementation libs.exoplayer
+    implementation libs.media3UI
+    implementation libs.eventbus
+    implementation libs.gson
+    implementation libs.qrcodecore
+    implementation libs.zxingcore
+
+    implementation project(path: ':lib_payment')
+    implementation project(path: ':lib_usb')
+}
